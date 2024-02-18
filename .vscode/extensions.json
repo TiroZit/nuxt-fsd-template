@@ -1,0 +1,29 @@
+{
+	"recommendations": [
+		"ionutvmi.path-autocomplete",
+		"EditorConfig.EditorConfig",
+		"rebornix.project-snippets",
+		"mrezechi3l.css-responsive",
+		"stylelint.vscode-stylelint",
+		"phoenisx.cssvar",
+		"amandeepmittal.pug",
+		"hollowtree.vue-snippets",
+		"dbaeumer.vscode-eslint",
+		"antfu.file-nesting",
+		"visualstudioexptteam.vscodeintellicode",
+		"ms-vscode.vscode-typescript-next",
+		"ducfilan.pug-formatter",
+		"syler.sass-indented",
+		"vue.vscode-typescript-vue-plugin",
+		"vue.volar",
+		"xabikos.javascriptsnippets",
+		"mikestead.dotenv",
+		"fractalbrew.backticks",
+		"donjayamanne.githistory",
+		"github.vscode-pull-request-github",
+		"eamodio.gitlens",
+		"oderwat.indent-rainbow",
+		"steoates.autoimport",
+		"mrmlnc.vscode-attrs-sorter"
+	]
+}

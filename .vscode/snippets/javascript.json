@@ -1,0 +1,29 @@
+{
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log($0);"
+		]
+	},
+	"JS Click": {
+		"prefix": "click",
+		"body": [
+			"${1:document}.addEventListener(\"click\", function (e) {\n\t$2\n});"
+		],
+		"description": "document.querySelectorAll"
+	},
+	"document.querySelector": {
+		"prefix": "dq",
+		"body": [
+			"const ${1:var} = document.querySelector('.$2');"
+		],
+		"description": "document.querySelector"
+	},
+	"document.querySelectorAll": {
+		"prefix": "dqa",
+		"body": [
+			"const ${1:var} =document.querySelectorAll('.$2');"
+		],
+		"description": "document.querySelectorAll"
+	}
+}

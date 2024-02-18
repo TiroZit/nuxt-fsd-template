@@ -1,0 +1,14 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = crlf
+indent_size = unset
+indent_style = tab
+insert_final_newline = true
+max_line_length = 120
+tab_width = unset
+ij_continuation_indent_size = unset
+ij_formatter_tags_enabled = true
+ij_smart_tabs = true
+ij_wrap_on_typing = false

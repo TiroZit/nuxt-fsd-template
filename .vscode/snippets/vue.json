@@ -1,0 +1,19 @@
+{
+	"vInit": {
+		"prefix": "vinit",
+		"body": [
+			"<script setup lang=\"ts\">",
+			"",
+			"</script>",
+			"",
+			"<template>",
+			"</template>",
+			"",
+			"<style scoped lang=\"sass\">",
+			"",
+			"</style>",
+			""
+		],
+		"description": "Default vue sfc component"
+	}
+}

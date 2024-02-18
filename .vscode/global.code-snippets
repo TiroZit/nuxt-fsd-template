@@ -1,0 +1,310 @@
+{
+	"img vars": {
+		"scope": "sass,vue",
+		"prefix": "imgVars",
+		"body": [
+			"--i-width: $1px",
+			"--i-height: $2px",
+			"--i-aspect-ratio: ${1:1} / ${2:1}",
+			"// -----------------"
+		]
+	},
+	"icon": {
+		"scope": "sass,vue",
+		"prefix": "icon",
+		"body": [
+			"@include icon('${1:name}')"
+		]
+	},
+	"media 375 up": {
+		"scope": "sass,vue",
+		"prefix": "@mu9",
+		"body": [
+			"@include media(\"min\", \"mobile\")",
+			"  $0"
+		]
+	},
+	"media 480 up": {
+		"scope": "sass,vue",
+		"prefix": "@mu8",
+		"body": [
+			"@include media(\"min\", \"mobile-xl\")",
+			"  $0"
+		]
+	},
+	"media 768 up": {
+		"scope": "sass,vue",
+		"prefix": "@mu7",
+		"body": [
+			"@include media(\"min\", \"tablet\")",
+			"  $0"
+		]
+	},
+	"media 992 up": {
+		"scope": "sass,vue",
+		"prefix": "@mu6",
+		"body": [
+			"@include media(\"min\", \"tablet-xl\")",
+			"  $0"
+		]
+	},
+	"media 1024 up": {
+		"scope": "sass,vue",
+		"prefix": "@mu5",
+		"body": [
+			"@include media(\"min\", \"laptop\")",
+			"  $0"
+		]
+	},
+	"media 1280 up": {
+		"scope": "sass,vue",
+		"prefix": "@mu4",
+		"body": [
+			"@include media(\"min\", \"laptop-xl\")",
+			"  $0"
+		]
+	},
+	"media 1440 up": {
+		"prefix": "@mu3",
+		"body": [
+			"@include media(\"min\", \"laptop-xxl\")",
+			"  $0"
+		]
+	},
+	"media 1600 up": {
+		"scope": "sass,vue",
+		"prefix": "@mu2",
+		"body": [
+			"@include media(\"min\", \"pc\")",
+			"  $0"
+		]
+	},
+	"media container up": {
+		"scope": "sass,vue",
+		"prefix": "@mu1",
+		"body": [
+			"@include media(\"min\", \"container\")",
+			"  $0"
+		]
+	},
+	"media 375 down": {
+		"scope": "sass,vue",
+		"prefix": "@md9",
+		"body": [
+			"@include media(\"max\", \"mobile\")",
+			"  $0"
+		]
+	},
+	"media 480 down": {
+		"scope": "sass,vue",
+		"prefix": "@md8",
+		"body": [
+			"@include media(\"max\", \"mobile-xl\")",
+			"  $0"
+		]
+	},
+	"media 768 down": {
+		"scope": "sass,vue",
+		"prefix": "@md7",
+		"body": [
+			"@include media(\"max\", \"tablet\")",
+			"  $0"
+		]
+	},
+	"media 992 down": {
+		"scope": "sass,vue",
+		"prefix": "@md6",
+		"body": [
+			"@include media(\"max\", \"tablet-xl\")",
+			"  $0"
+		]
+	},
+	"media 1024 down": {
+		"scope": "sass,vue",
+		"prefix": "@md5",
+		"body": [
+			"@include media(\"max\", \"laptop\")",
+			"  $0"
+		]
+	},
+	"media 1280 down": {
+		"scope": "sass,vue",
+		"prefix": "@md4",
+		"body": [
+			"@include media(\"max\", \"laptop-xl\")",
+			"  $0"
+		]
+	},
+	"media 1440 down": {
+		"scope": "sass,vue",
+		"prefix": "@md3",
+		"body": [
+			"@include media(\"max\", \"laptop-xxl\")",
+			"  $0"
+		]
+	},
+	"media 1600 down": {
+		"scope": "sass,vue",
+		"prefix": "@md2",
+		"body": [
+			"@include media(\"max\", \"pc\")",
+			"  $0"
+		]
+	},
+	"media container down": {
+		"scope": "sass,vue",
+		"prefix": "@md1",
+		"body": [
+			"@include media(\"max\", \"container\")",
+			"  $0"
+		]
+	},
+	"Adaptiv Value": {
+		"scope": "sass,vue",
+		"prefix": "av",
+		"body": [
+			"fluid(${1:min}, ${2:max})"
+		],
+		"description": "Адаптивное свойство: начальное значение, конечное значение, ширина начальная, ширина конечная"
+	},
+	"background-image": {
+		"scope": "sass,vue",
+		"prefix": "image",
+		"body": [
+			"@include image(\"../img/$1\", \"${2:jpg}\")"
+		],
+		"description": "Миксин background-image для добавления webp, avif"
+	},
+	"mu": {
+		"scope": "sass,vue",
+		"prefix": "mu",
+		"body": [
+			"margin: 0 auto"
+		],
+		"description": "margin center"
+	},
+	"EM": {
+		"scope": "sass,vue",
+		"prefix": "em",
+		"body": [
+			"em($1,$2)"
+		],
+		"description": "Вызов миксина перевода в EM"
+	},
+	"background": {
+		"scope": "sass,vue",
+		"prefix": "bg",
+		"body": [
+			"background: url(\"@img$0\") 0 0 no-repeat"
+		]
+	},
+	"Анимация": {
+		"scope": "sass,vue",
+		"prefix": "aa",
+		"body": [
+			"transition: ${1:all} .${2:3}s"
+		]
+	},
+	"Not last-child": {
+		"scope": "sass,vue",
+		"prefix": "nlc",
+		"body": [
+			"&:not(:last-child)\n\t$0"
+		],
+		"description": "Исключая последний объект"
+	},
+	"br": {
+		"scope": "sass,vue",
+		"prefix": "br",
+		"body": [
+			"border-radius: $0"
+		],
+		"description": "br"
+	},
+	"lc": {
+		"scope": "sass,vue",
+		"prefix": "lc",
+		"body": [
+			"&:last-child\n\t$0"
+		],
+		"description": "lc"
+	},
+	"fc": {
+		"scope": "sass,vue",
+		"prefix": "fc",
+		"body": [
+			"&:first-child\n\t$0"
+		],
+		"description": "fc"
+	},
+	"nc": {
+		"scope": "sass,vue",
+		"prefix": "nc",
+		"body": [
+			"&:nth-child($0)"
+		],
+		"description": "nc"
+	},
+	"BeforeAfter": {
+		"scope": "sass,vue",
+		"prefix": "ba",
+		"body": [
+			"&::before,&::after\n\tcontent: ''\n\t$0"
+		],
+		"description": "ba"
+	},
+	"After": {
+		"scope": "sass,vue",
+		"prefix": "a",
+		"body": [
+			"&::after\n\tcontent: ''\n\t$0"
+		],
+		"description": "after"
+	},
+	"Before": {
+		"scope": "sass,vue",
+		"prefix": "b",
+		"body": [
+			"&::before\n\tcontent: ''\n\t$0"
+		],
+		"description": "before"
+	},
+	"hv": {
+		"scope": "sass,vue",
+		"prefix": "hv",
+		"body": [
+			"@include hover\n\t$0"
+		],
+		"description": "hv"
+	},
+	"fbw": {
+		"scope": "sass,vue",
+		"prefix": "fbw",
+		"body": [
+			"flex-wrap: wrap"
+		],
+		"description": "fbw"
+	},
+	"fbd": {
+		"scope": "sass,vue",
+		"prefix": "fbd",
+		"body": [
+			"flex-direction: column"
+		],
+		"description": "fbd"
+	},
+	"проценты": {
+		"scope": "sass,vue",
+		"prefix": "prc",
+		"body": [
+			"percent(${1:Размер}, ${2:Размер родителя})"
+		]
+	},
+	"scale-mirrored": {
+		"scope": "sass,vue",
+		"prefix": "scale-mirrored",
+		"body": [
+			"transform: scale(1, -1)"
+		]
+	}
+}

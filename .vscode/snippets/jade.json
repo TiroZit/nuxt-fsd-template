@@ -1,0 +1,139 @@
+{
+	"btn-color-primary": {
+		"prefix": "btn-color-primary",
+		"body": [
+			"+btn-color-primary('${1:text}', '${2:arrow-right}', '${3:a}')"
+		],
+		"description": "btn-color-primary"
+	},
+	"btn-color-secondary": {
+		"prefix": "btn-color-secondary",
+		"body": [
+			"+btn-color-secondary('${1:text}', '${2:arrow-right}', '${3:a}')"
+		],
+		"description": "btn-color-secondary"
+	},
+	"btn-transparent-primary": {
+		"prefix": "btn-transparent-primary",
+		"body": [
+			"+btn-transparent-primary('${1:text}', '${2:arrow-right}', '${3:a}')"
+		],
+		"description": "btn-transparent-primary"
+	},
+	"base-modal": {
+		"prefix": "modal",
+		"body": [
+			"base-modal(id='modal-${1:name}').modal-${1:name}",
+			"\ttemplate(#default='{close}')",
+			"\t\t.modal",
+			"\t\t\tbutton(data-dialog-close aria-label='закрыть' @click='close').modal__close",
+			"\t\t\t\t+icon('close-ellips').i-close-ellips",
+			"\t\t\t$0"
+		]
+	},
+	"base-accordion": {
+		"prefix": "accordion",
+		"body": [
+			"base-accordion${1:class}",
+			"\ttemplate(#title) ${2:Заголовок}",
+			"\ttemplate(#body)",
+			"\t\t${0:|Контент}"
+		]
+	},
+	"base-accordion-mixin": {
+		"prefix": "accordion-mixin",
+		"body": [
+			"+base-accordion(",
+			"\t[",
+			"\t\t{",
+			"\t\t\ttitle: '$1',",
+			"\t\t\tcontent: '$2'",
+			"\t\t},",
+			"\t]",
+			")"
+		],
+		"description": "base-accordion"
+	},
+	"base-gallery": {
+		"prefix": "gallery",
+		"body": [
+			"+base-gallery(",
+			"\t'${1:id}',",
+			"\t[",
+			"\t\t{",
+			"\t\t\timg: '$2',",
+			"\t\t\twidth: '$3',",
+			"\t\t\theight: '$4',",
+			"\t\t},",
+			"\t]",
+			")",
+			"$0"
+		],
+		"description": "base-gallery"
+	},
+	"breadcrumbs mixin": {
+		"prefix": "breadcrumbs",
+		"body": [
+			"+breadcrumbs(['${1:Главная}', '${2:UI}'])"
+		],
+		"description": "breadcrumbs mixin"
+	},
+	"base-tabs": {
+		"prefix": "tabs",
+		"body": [
+			"tabs-template",
+			"\ttemplate(#tabs='{setTab}')",
+			"\t\tbase-tabs(@change='setTab' :tabs='[\"Таб 1\", \"Таб 2\"]').${1:class}__tabs",
+			"\ttemplate(#content='{activeTab}')",
+			"\t\t.${2:class}__content(v-if='activeTab === \"Таб 1\"')",
+			"\t\t\t.${2:class}__content-wrapper",
+			"\t\t.${2:class}__content(v-else-if='activeTab === \"Таб 2\"')",
+			"\t\t\t.${2:class}__content-wrapper"
+		]
+	},
+	"svg mixin": {
+		"prefix": "svg",
+		"body": [
+			"+icon('${1:icon}').i-${1:icon}"
+		]
+	},
+	"mixin image": {
+		"prefix": "img",
+		"body": [
+			"+image('img$1', '${2:alt}', '${3:static}')"
+		]
+	},
+	"mixin image media": {
+		"prefix": "imgMedia",
+		"body": [
+			"+image('img$1', '${2:alt}', '${3:static}' [{file:\"img$4\", mediaQuery:\"${5:max-width}\", breakpoint:\"${6:1024}\"}])"
+		]
+	},
+	"Слайдер swiper": {
+		"prefix": "swiper",
+		"body": [
+			".$0-slider.swiper",
+			"\t.$0-slider__wrapper.swiper-wrapper",
+			"\t\t.$0-slider__slide.swiper-slide",
+			"\t.$0-slider__pagination.swiper-pagination",
+			"\tbutton.$0-slider__arrow$0-slider__arrow_prev.swiper-button-prev(type='button')",
+			"\tbutton.$0-slider__arrow$0-slider__arrow_next.swiper-button-next(type='button')"
+		],
+		"description": "Базовая разметка Swiper"
+	},
+	"Wrapper": {
+		"prefix": "cnt",
+		"body": ".${1:имя блока}__wrapper\n\t$2",
+		"description": "Добавляет ограничивающий контейнер"
+	},
+	"Button Item": {
+		"prefix": "btn",
+		"body": "button.btn$1(type=\"button\") ${2:Текст}",
+		"description": "button"
+	},
+	"Button Link": {
+		"prefix": "abtn",
+		"body": "a.btn$1(href=\"${2:#}\" target=\"${3:_blank}\") ${4:Текст}",
+		"description": ""
+	}
+}
