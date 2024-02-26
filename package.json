@@ -33,7 +33,7 @@
 		"@nuxt/devtools-ui-kit": "1.0.8",
 		"@nuxt/ui": "2.13.0",
 		"autoprefixer": "10.4.17",
-		"eslint": "8.56.0",
+		"eslint": "8.57.0",
 		"eslint-plugin-import": "2.29.1",
 		"nuxt": "3.10.2",
 		"nuxt-mongoose": "1.0.5",
