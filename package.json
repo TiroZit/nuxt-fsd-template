@@ -24,7 +24,7 @@
 	],
 	"dependencies": {
 		"vue": "3.4.19",
-		"vue-router": "4.2.5"
+		"vue-router": "4.3.0"
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "2.6.4",
