@@ -41,7 +41,7 @@
 		"postcss-functions": "4.0.2",
 		"postcss-pxtorem": "6.1.0",
 		"postcss-sort-media-queries": "5.2.0",
-		"sass": "1.71.0",
+		"sass": "1.72.0",
 		"stylelint": "16.2.1",
 		"stylelint-config-html": "1.1.0",
 		"stylelint-config-recommended-scss": "14.0.0",
