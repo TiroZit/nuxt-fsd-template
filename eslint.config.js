@@ -1,11 +1,6 @@
 import antfu from '@antfu/eslint-config';
-import featureSliced from '@conarti/eslint-plugin-feature-sliced';
 
 export default antfu({
-	plugins: {
-		featureSliced,
-	},
-
 	stylistic: {
 		indent: 'tab',
 		quotes: 'single',

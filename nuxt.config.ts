@@ -1,45 +1,12 @@
-import { defineNuxtConfig } from 'nuxt/config';
-import {
-	em,
-	fluid,
-	percent,
-} from './config/postcss/functions';
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	devtools: { enabled: true },
-	modules: ['nuxt-mongoose'],
 	srcDir: 'src/',
 	typescript: {
 		strict: true,
 	},
 	vue: {
 		propsDestructure: true,
-	},
-	css: [
-		'@/app/styles/_index.sass',
-	],
-	postcss: {
-		plugins: {
-			'autoprefixer': true,
-			'postcss-pxtorem': {
-				propList: [
-					'*',
-				],
-				selectorBlackList: [
-					'line-height',
-					'letter-spacing',
-				],
-			},
-			'postcss-functions': {
-				functions: {
-					fluid,
-					em,
-					percent,
-				},
-			},
-			'postcss-sort-media-queries': true,
-		},
 	},
 	dir: {
 		assets: 'app/assets',
@@ -48,32 +15,28 @@ export default defineNuxtConfig({
 	},
 	components: [
 		{
-			path: 'shared',
-			extensions: ['.vue'],
-			prefix: 'Shared',
+			path: 'widgets',
+			pathPrefix: false,
 		},
 		{
 			path: 'features',
-			extensions: ['.vue'],
-			prefix: 'Feature',
-		},
-		{
-			path: 'widgets',
-			extensions: ['.vue'],
-			prefix: 'Widget',
+			pathPrefix: false,
 		},
 		{
 			path: 'entities',
-			extensions: ['.vue'],
-			prefix: 'Entity',
+			pathPrefix: false,
+		},
+		{
+			path: 'shared',
+			pathPrefix: false,
 		},
 	],
-	imports: {
-		dirs: [
-			'shared/**/*.ts',
-			'features/**/*.ts',
-			'widgets/**/*.ts',
-			'entities/**/*.ts',
-		],
-	},
+	// pinia: {
+	// 	storesDirs: [
+	// 		'./src/widgets/**/model/*.ts',
+	// 		'./src/features/**/model/*.ts',
+	// 		'./src/entities/**/model/*.ts',
+	// 		'./src/shared/**/model/*.ts',
+	// 	],
+	// },
 });
