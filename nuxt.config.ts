@@ -11,6 +11,8 @@ export default defineNuxtConfig({
 	dir: {
 		assets: 'app/assets',
 		public: 'app/public',
+		layouts: 'app/layouts',
+		pages: 'app/providers/router/routes',
 		middleware: 'app/providers/router/middleware',
 	},
 	components: [
