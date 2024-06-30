@@ -2,12 +2,15 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	srcDir: 'src/',
+
 	typescript: {
 		strict: true,
 	},
+
 	vue: {
 		propsDestructure: true,
 	},
+
 	dir: {
 		assets: 'app/assets',
 		public: 'app/public',
@@ -15,6 +18,15 @@ export default defineNuxtConfig({
 		pages: 'app/providers/router/routes',
 		middleware: 'app/providers/router/middleware',
 	},
+
+	// pinia: {
+	// 	storesDirs: [
+	// 		'./src/widgets/**/model/*.ts',
+	// 		'./src/features/**/model/*.ts',
+	// 		'./src/entities/**/model/*.ts',
+	// 		'./src/shared/**/model/*.ts',
+	// 	],
+	// },
 	components: [
 		{
 			path: 'widgets',
@@ -33,12 +45,6 @@ export default defineNuxtConfig({
 			pathPrefix: false,
 		},
 	],
-	// pinia: {
-	// 	storesDirs: [
-	// 		'./src/widgets/**/model/*.ts',
-	// 		'./src/features/**/model/*.ts',
-	// 		'./src/entities/**/model/*.ts',
-	// 		'./src/shared/**/model/*.ts',
-	// 	],
-	// },
+
+	modules: ['@nuxt/eslint'],
 });
