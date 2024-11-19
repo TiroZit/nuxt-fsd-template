@@ -17,7 +17,7 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
-		"nuxt": "3.12.3",
+		"nuxt": "3.14.1592",
 		"vue": "3.4.31",
 		"vue-router": "4.4.0"
 	},
