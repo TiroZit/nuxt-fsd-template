@@ -9,14 +9,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 Make sure to install the dependencies:
 
 ```bash
-# bun
-bun install
+npm install
 ```
 
-## Nuxt routing
-
-### How to enable?
-
-1. Create a `pages` directory in the `src` folder
-2. In `pages` create `index.vue`, which will replace `app.vue`
-3. Delete `app.vue`
+## [Nuxt routing](https://feature-sliced.design/ru/docs/guides/tech/with-nuxtjs#%D1%80%D0%BE%D1%83%D1%82%D0%B8%D0%BD%D0%B3-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%B0)
