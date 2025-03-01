@@ -1,5 +1,10 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import {
+	em,
+	fluid,
+	percent,
+} from './config/postcss/functions';
 
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: '2025-01-05',
 
@@ -52,11 +57,30 @@ export default defineNuxtConfig({
 			preprocessorOptions: {
 				sass: {
 					additionalData: `
-						@use '@/app/styles/mixins/_index.sass' as *
+						@use '@/app/styles/mixins/_index.sass' as * \n
 					`,
 				},
 			},
 		},
+	},
+
+	postcss: {
+		plugins: {
+			'autoprefixer': {},
+			'postcss-sort-media-queries': {},
+			'postcss-pxtorem': {},
+			'postcss-functions': {
+				functions: {
+					fluid,
+					em,
+					percent,
+				},
+			},
+		},
+	},
+
+	experimental: {
+		typedPages: true,
 	},
 
 	modules: ['@nuxt/eslint'],
