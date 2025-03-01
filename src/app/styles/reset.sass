@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after
+	box-sizing: border-box
+
+/* Common */
+
+body
+	-webkit-text-size-adjust: 100%
+	text-size-adjust: 100% // чтобы сафари сам не регулировал размер шрифта
+
+:where(h1, h2, h3, h4, h5, h6, p, dl, blockquote, body)
+	margin: 0
+
+:where(ul, ol)
+	margin: 0
+	padding: 0
+	list-style: none
+
+:where(img, svg, video, iframe)
+	max-width: 100%
+	height: auto
+	font-style: italic
+	vertical-align: middle
+
+:where(address[class])
+	font-style: normal
+
+:where(a)
+	outline: none
+	color: inherit
+	font: inherit
+	text-decoration: none
+	-webkit-tap-highlight-color: transparent
+
+	&[href^='tel']
+		white-space: nowrap
+
+:where(button, input, textarea, select)
+	font: inherit
+
+:where(button)
+	padding: 0
+	border: none
+	outline: none
+	background-color: transparent
+	color: inherit
+	font: inherit

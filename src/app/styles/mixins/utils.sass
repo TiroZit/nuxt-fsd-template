@@ -1,0 +1,88 @@
+@use 'sass:math'
+
+/* Оформление горизонтального скроллбара */
+@mixin h-scroll()
+	scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-background)
+	scrollbar-width: thin
+
+	&::-webkit-scrollbar /* 1 - скроллбар */
+		-webkit-appearance: none
+		appearance: none
+
+	&::-webkit-scrollbar-track /* 3 - трек */
+		border-radius: 2px
+		background: var(--scrollbar-color-background)
+
+	&::-webkit-scrollbar-thumb /* 5 - ползунок */
+		border: 3px solid var(--scrollbar-color-thumb)
+		border-radius: 2px
+		background-color: var(--scrollbar-color-thumb)
+
+/* Оформление вертикального скроллбара */
+@mixin v-scroll()
+	scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-background)
+	scrollbar-width: thin
+
+	&::-webkit-scrollbar /* 1 - скроллбар */
+		width: 6px
+		-webkit-appearance: none
+		appearance: none
+
+	&::-webkit-scrollbar-track /* 3 - трек */
+		border-radius: 4px
+		background: var(--scrollbar-color-background)
+
+	&::-webkit-scrollbar-thumb /* 5 - ползунок */
+		border: 2px solid var(--scrollbar-color-thumb)
+		border-radius: 2px
+		background-color: var(--scrollbar-color-thumb)
+
+/* Скрыть отображение скроллбара */
+@mixin hide-scroll()
+	scrollbar-width: none
+
+	&::-webkit-scrollbar
+		display: none
+		width: 0
+		-webkit-appearance: none
+		appearance: none
+
+/* Обрезание строки */
+@mixin cut-string($count)
+	display: -webkit-box
+	overflow: hidden
+	text-overflow: ellipsis
+	-webkit-line-clamp: $count
+	-webkit-box-orient: vertical
+
+/* Стили только для устройств с точными указателями */
+@mixin has-pointer()
+	@media (hover: hover) and (pointer: fine)
+		@content
+
+/* Стили только для устройств без точных указателей */
+@mixin no-pointer()
+	@media (hover: none) and (pointer: coarse)
+		@content
+
+/* Ховер для устройств с точными указателемя */
+@mixin hover()
+	@media (hover: hover) and (pointer: fine)
+		&:hover
+			@content
+
+/* Для блоков с паддингами по бокам (слайдер, табы и тд) */
+@mixin out-wrapper()
+	width: calc(100% + var(--wrapper-padding) * 2)
+	max-width: none
+	margin-right: calc(-1 * var(--wrapper-padding))
+	margin-left: calc(-1 * var(--wrapper-padding))
+	padding-right: var(--wrapper-padding)
+	padding-left: var(--wrapper-padding)
+
+/* Для блоков без паддингов (в основном баннеры) */
+@mixin out-wrapper-full()
+	width: calc(100% + var(--wrapper-padding) * 2)
+	max-width: none
+	margin-right: calc(-1 * var(--wrapper-padding))
+	margin-left: calc(-1 * var(--wrapper-padding))

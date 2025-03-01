@@ -5,6 +5,7 @@ export default defineNuxtConfig({
 
 	app: {
 		head: {
+			htmlAttrs: { lang: 'ru' },
 			meta: [
 				{ charset: 'UTF-8' },
 				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -43,6 +44,19 @@ export default defineNuxtConfig({
 	imports: {
 		autoImport: false,
 		scan: false,
+	},
+
+	css: ['/app/styles/_index.sass'],
+	vite: {
+		css: {
+			preprocessorOptions: {
+				sass: {
+					additionalData: `
+						@use '@/app/styles/mixins/_index.sass' as *
+					`,
+				},
+			},
+		},
 	},
 
 	modules: ['@nuxt/eslint'],
