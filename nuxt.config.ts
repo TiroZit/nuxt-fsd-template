@@ -3,13 +3,16 @@
 export default defineNuxtConfig({
 	compatibilityDate: '2025-01-05',
 	srcDir: 'src/',
+	devtools: {
+		enabled: true,
+	},
 
 	dir: {
-		assets: 'app/assets',
-		public: 'app/public',
 		layouts: 'app/layouts',
 		pages: 'app/providers/router/routes',
 		middleware: 'app/providers/router/middleware',
+		public: '../public',
+		assets: 'shared/assets',
 	},
 
 	components: {
