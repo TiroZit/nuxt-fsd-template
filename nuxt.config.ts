@@ -51,14 +51,15 @@ export default defineNuxtConfig({
 		scan: false,
 	},
 
-	css: ['/app/styles/_index.sass'],
+	css: ['@/shared/assets/styles/_index.sass'],
 	vite: {
 		css: {
 			preprocessorOptions: {
 				sass: {
 					additionalData: `
-						@use '@/app/styles/mixins/_index.sass' as * \n
+						@import '@/shared/assets/styles/mixins'\n
 					`,
+					silenceDeprecations: ['import'],
 				},
 			},
 		},

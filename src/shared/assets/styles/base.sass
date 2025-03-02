@@ -1,0 +1,55 @@
+@use 'sass:math'
+
+html
+	background-color: var(--body-bg)
+	color: var(--body-color)
+	font-family: var(--font-family)
+	font-size: 16px
+	font-weight: var(--font-weight)
+	line-height: var(--line-height)
+	scroll-behavior: smooth
+
+	@include v-scroll
+
+	@include media('max', 'pc')
+		font-size: calc(16 / 1920) * 100vw
+
+	@include media('max', 'laptop-xxl')
+		font-size: calc(16 / 1440) * 100vw
+
+	@include media('max', 'laptop-xl')
+		font-size: calc(16 / 1280) * 100vw
+
+	@include media('max', 'laptop')
+		font-size: calc(16 / 1024) * 100vw
+
+	@include media('max', 'tablet')
+		font-size: calc(16 / 768) * 100vw
+
+	@include media('max', 'mobile-xl')
+		font-size: calc(16 / 375) * 100vw
+
+	@media screen and (min-width: 2600px)
+		font-size: calc(16 / 1600) * 100vw
+
+	@media (width <= em(375))
+		font-size: calc(14 / 375) * 100vw
+
+body
+	min-width: var(--page-min-width)
+	min-height: var(--app-height)
+	margin: 0 auto
+
+	&.modal-lock
+		padding-right: var(--scrollbar-compensate, 0)
+		overflow: hidden
+
+//*::selection
+//	background-color: var(--color-primary-300)
+//	color: var(--color-neutral-900)
+
+.scroll-lock
+	overflow: hidden
+
+.grecaptcha-badge
+	display: none !important

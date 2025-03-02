@@ -15,7 +15,7 @@ $breakpoints: ( 'mobile': 375, 'mobile-xl': 480, 'tablet': 768, 'tablet-xl': 992
 	@each $size, $resolution in $breakpoints
 		@if $media == $size
 			@if $minmax == 'max'
-				@media (width <= em($resolution))
+				@media (max-width: em($resolution))
 					@content
 			@else
 				@media (min-width: calc(em($resolution) + 0.1px))
