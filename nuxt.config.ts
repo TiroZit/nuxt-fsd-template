@@ -7,6 +7,7 @@ import {
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: '2025-01-05',
+	modules: ['@nuxt/eslint', '@nuxt/icon', '@nuxt/fonts'],
 
 	app: {
 		head: {
@@ -93,6 +94,4 @@ export default defineNuxtConfig({
 	experimental: {
 		typedPages: true,
 	},
-
-	modules: ['@nuxt/eslint', '@nuxt/icon'],
 });
