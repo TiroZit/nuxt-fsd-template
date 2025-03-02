@@ -80,9 +80,19 @@ export default defineNuxtConfig({
 		},
 	},
 
+	icon: {
+		mode: 'svg',
+		customCollections: [
+			{
+				prefix: 'icons',
+				dir: 'src/shared/assets/icons',
+			},
+		],
+	},
+
 	experimental: {
 		typedPages: true,
 	},
 
-	modules: ['@nuxt/eslint'],
+	modules: ['@nuxt/eslint', '@nuxt/icon'],
 });
