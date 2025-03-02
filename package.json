@@ -45,6 +45,6 @@
 		"stylelint-order": "6.0.4",
 		"sugarss": "5.0.0",
 		"typescript": "5.5.3",
-		"vue-tsc": "2.2.6"
+		"vue-tsc": "2.2.8"
 	}
 }
