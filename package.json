@@ -33,7 +33,7 @@
 		"@stylistic/stylelint-config": "2.0.0",
 		"eslint": "9.21.0",
 		"husky": "9.1.7",
-		"lint-staged": "15.4.3",
+		"lint-staged": "15.5.2",
 		"postcss": "8.5.3",
 		"postcss-functions": "4.0.2",
 		"postcss-html": "1.8.0",
